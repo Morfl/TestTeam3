@@ -30,6 +30,11 @@ public class ClientController {
         return clientService.getClientByEmail(email);
     }
 
+    @GetMapping("/test")
+    public String getClientByEmail() {
+        return "test";
+    }
+
     @PutMapping("/update/{clientId}")
     public Client updateClient(@PathVariable Long clientId, @RequestBody Client updateClient) {
         return clientService.updateClient(clientId, updateClient);
